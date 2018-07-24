@@ -1,0 +1,13 @@
+<h1>Listing pessoas</h1>
+
+<%= form_tag "/buscar", :remote => true do %>
+  Search: <%= text_field_tag :busca, params[:busca] %>
+  <%= submit_tag 'Buscar' %>
+<% end %>
+
+<div id="dados_busca"></div>
+
+<br/>
+
+<%= link_to 'New Pessoa', new_pessoa_path %>
+
